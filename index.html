@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>kalkulator</title>
+
+  <!-- Bootstrap css -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom css -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="d-flex align-items-center justify-content-center p-3">
+  <main class="kalkulator bg-white shadow-lg p-4">
+    <header class="mb-4">
+      <h1 class="h4 fw-bold mb-1">Kalkulator</h1>
+      <p class="text-secondary small mb-0">
+        Hitung dengan mudah dan cepat.
+      </p>
+    </header>
+
+    <!-- Tampilan kalkulator -->
+    <section class="display mb-4" aria-label="Tampilan perhitungan">
+
+      <div id="riwayat" class="riwayat"></div>
+
+      <output id="hasil" class="hasil d-block" aria-label="Hasil perhitungan" aria-live="polite">
+        0
+      </output>
+
+    </section>
+
+    <!-- Tombol kalkulator -->
+    <section aria-label="Tombol kalkulator">
+
+      <div id="tombol-kalkulator" class="row g-2">
+
+        <!-- Baris pertama -->
+        <div class="col-6">
+          <button type="button" class="btn btn-danger tombol w-100" data-aksi="reset">
+            AC
+          </button>
+        </div>
+
+        <div class="col-3">
+          <button type="button" class="btn btn-light tombol w-100" data-aksi="hapus" aria-label="Hapus satu angka">
+            ←
+          </button>
+        </div>
+
+        <div class="col-3">
+          <button type="button" class="btn btn-primary tombol w-100" data-operator="/" aria-label="Bagi">
+            ÷
+          </button>
+        </div>
+
+        <!-- Baris kedua -->
+        <div class="col-3">
+          <button type="button" class="btn btn-light tombol w-100" data-angka="7">
+            7
+          </button>
+        </div>
+
+        <div class="col-3">
+          <button type="button" class="btn btn-light tombol w-100" data-angka="8">
+            8
+          </button>
+        </div>
+
+        <div class="col-3">
+          <button type="button" class="btn btn-light tombol w-100" data-angka="9">
+            9
+          </button>
+        </div>
+
+        <div class="col-3">
+          <button type="button" class="btn btn-primary tombol w-100" data-operator="*" aria-label="Kali">
+            ×
+          </button>
+        </div>
+
+        <!-- Baris ketiga -->
+        <div class="col-3">
+          <button type="button" class="btn btn-light tombol w-100" data-angka="4">
+            4
+          </button>
+        </div>
+
+        <div class="col-3">
+          <button type="button" class="btn btn-light tombol w-100" data-angka="5">
+            5
+          </button>
+        </div>
+
+        <div class="col-3">
+          <button type="button" class="btn btn-light tombol w-100" data-angka="6">
+            6
+          </button>
+        </div>
+
+        <div class="col-3">
+          <button type="button" class="btn btn-primary tombol w-100" data-operator="-" aria-label="Kurang">
+            −
+          </button>
+        </div>
+
+        <!-- Baris keempat -->
+        <div class="col-3">
+          <button type="button" class="btn btn-light tombol w-100" data-angka="1">
+            1
+          </button>
+        </div>
+
+        <div class="col-3">
+          <button type="button" class="btn btn-light tombol w-100" data-angka="2">
+            2
+          </button>
+        </div>
+
+        <div class="col-3">
+          <button type="button" class="btn btn-light tombol w-100" data-angka="3">
+            3
+          </button>
+        </div>
+
+        <div class="col-3">
+          <button type="button" class="btn btn-primary tombol w-100" data-operator="+" aria-label="Tambah">
+            +
+          </button>
+        </div>
+
+        <!-- Baris terakhir -->
+        <div class="col-6">
+          <button type="button" class="btn btn-light tombol w-100" data-angka="0">
+            0
+          </button>
+        </div>
+
+        <div class="col-3">
+          <button type="button" class="btn btn-light tombol w-100" data-angka="." aria-label="Titik desimal">
+            .
+          </button>
+        </div>
+
+        <div class="col-3">
+          <button type="button" class="btn btn-success tombol w-100" data-aksi="hitung" aria-label="Hitung hasil">
+            =
+          </button>
+        </div>
+
+      </div>
+
+    </section>
+
+    <footer class="mt-4 text-center">
+      <small class="text-secondary">
+        AC: reset · ←: hapus satu angka
+      </small>
+    </footer>
+  </main>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
