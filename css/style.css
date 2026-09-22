@@ -1,12 +1,12 @@
 :root {
-  --warna-latar: #eef3fb;
-  --warna-utama: #2563eb;
-  --warna-display: #10213a;
+  --warna-latar: #073a6101;
+  --warna-utama: #08a098;
+  --warna-display: #616164;
 }
 
 body {
   min-height: 100vh;
-  background: linear-gradient(135deg, var(--warna-latar), #dce8ff);
+  background: linear-gradient(135deg, var(--warna-latar), #2158be);
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -31,20 +31,19 @@ body {
 }
 
 .hasil {
-  overflow-wrap: 24px;
-  font-size: clam(28px, 7vw, 40px);
+  overflow-wrap: break-word;
+  font-size: clamp(28px, 7vw, 40px);
   font-weight: bold;
   line-height: 1.3;
 }
-.tombol{
+
+.tombol {
   min-height: 60px;
   border-radius: 12px;
   font-size: 20px;
   font-weight: 600;
   /* Animasi */
-  transform: transfrom 0,2s ease;
-      background-color: 0,2 ease;
-
+  transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 .tombol:hover {
@@ -52,7 +51,7 @@ body {
 }
 
 .tombol:active {
-  transform: scale(0,96);
+  transform: scale(0.96);
 }
 
 .btn-primary {
@@ -64,8 +63,8 @@ body {
   .tombol {
     transition: none;
   }
-  .tombol:hover
+  .tombol:hover,
   .tombol:active {
-        transform: none;
+    transform: none;
   }
 }
